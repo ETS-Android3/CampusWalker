@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link student_data_table#newInstance} factory method to
+ * Use the {@link StudentDataTable#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class student_data_table extends Fragment {
+public class StudentDataTable extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +24,7 @@ public class student_data_table extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public student_data_table() {
+    public StudentDataTable() {
         // Required empty public constructor
     }
 
@@ -37,8 +37,8 @@ public class student_data_table extends Fragment {
      * @return A new instance of fragment student_data_table.
      */
     // TODO: Rename and change types and number of parameters
-    public static student_data_table newInstance(String param1, String param2) {
-        student_data_table fragment = new student_data_table();
+    public static StudentDataTable newInstance(String param1, String param2) {
+        StudentDataTable fragment = new StudentDataTable();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
