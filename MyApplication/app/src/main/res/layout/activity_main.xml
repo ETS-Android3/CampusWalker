@@ -68,15 +68,14 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="230dp"
-        android:layout_height="200dp"
-        android:layout_marginBottom="66dp"
-        android:text="Campus Assistant / Campus Walker / Campus Map / Campus Navigator"
+        android:layout_width="167dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="208dp"
+        android:text="Campus Walker"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.635"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
