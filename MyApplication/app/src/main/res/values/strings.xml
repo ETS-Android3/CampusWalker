@@ -22,4 +22,17 @@
         <item>Second Floor</item>
         <item>Third Floor</item>
     </string-array>
+
+    <string-array name="oxendine_rooms_array_floorOne">
+        <item>1201</item>
+        <item>1202</item>
+        <item>1203</item>
+        <item>1204</item>
+        <item>1207</item>
+        <item>1208</item>
+        <item>1209</item>
+        <item>1210</item>
+        <item>1211</item>
+    </string-array>
+
 </resources>

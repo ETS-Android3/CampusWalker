@@ -69,38 +69,38 @@ public class DisplayMessageActivity extends AppCompatActivity {
                     @RequiresApi(api = Build.VERSION_CODES.N)
                     @Override
                     public void onResponse(JSONObject response) {
-                        System.out.println("--------------------------------------------1");
-                        System.out.println();
-                        System.out.println("--------------------------------------------2");
-
-                        JSONArray classes = new JSONArray();
-                        classes.put(response);
-                        System.out.println("--------------------------------------------3");
-//                        try {
-//                            for (int i = 0; i < classes.length (); ++i) {
-//                                String keys = classes.getString (i);
-//                                String value = response.getString (keys);
-//                                System.out.println(value);
-//                            }
-//                        } catch (JSONException e) {
-//                            e.printStackTrace();
-//                        }
-//                        for(int i = 0; i < classes.length(); i++){
+//                        System.out.println("--------------------------------------------1");
+//                        System.out.println();
+//                        System.out.println("--------------------------------------------2");
 //
-//                            System.out.println(classes);
-//                        }
-
-                        response.keys().forEachRemaining(key -> {
-                            try {
-                                Object value = response.get(key);
-
-                                System.out.println(value.toString());
-                                System.out.println("Key: " + key + " Value" + value);
-
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-                        });
+//                        JSONArray classes = new JSONArray();
+//                        classes.put(response);
+//                        System.out.println("--------------------------------------------3");
+////                        try {
+////                            for (int i = 0; i < classes.length (); ++i) {
+////                                String keys = classes.getString (i);
+////                                String value = response.getString (keys);
+////                                System.out.println(value);
+////                            }
+////                        } catch (JSONException e) {
+////                            e.printStackTrace();
+////                        }
+////                        for(int i = 0; i < classes.length(); i++){
+////
+////                            System.out.println(classes);
+////                        }
+//
+//                        response.keys().forEachRemaining(key -> {
+//                            try {
+//                                Object value = response.get(key);
+//
+//                                System.out.println(value.toString());
+//                                System.out.println("Key: " + key + " Value" + value);
+//
+//                            } catch (JSONException e) {
+//                                e.printStackTrace();
+//                            }
+//                        });
 
 
 

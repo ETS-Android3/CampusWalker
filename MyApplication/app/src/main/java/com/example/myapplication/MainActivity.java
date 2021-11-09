@@ -32,6 +32,14 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void guestLogin(View view) {
+        Intent intent = new Intent(this, FloorPlans.class);
+//        EditText editText = (EditText) findViewById(R.id.editTextTextPersonName);
+//        String message = editText.getText().toString();
+//        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+    }
+
 //    public void openGuestActivity(View view){
 //        Intent intent = new Intent(this, HomeScreenActivity.class);
 //    }

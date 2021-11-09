@@ -18,7 +18,9 @@
             android:exported="false" />
         <activity
             android:name=".FloorPlans"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".loggedInNavigation"
+        />
         <activity
             android:name=".HomeScreenActivity"
             android:exported="false"
