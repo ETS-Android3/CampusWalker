@@ -15,4 +15,11 @@
     <string name="menu_explore">Explore Campus</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    // Array for spinner
+    <string-array name="oxendine_floors_array">
+        <item>First Floor</item>
+        <item>Second Floor</item>
+        <item>Third Floor</item>
+    </string-array>
 </resources>

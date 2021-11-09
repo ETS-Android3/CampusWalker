@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Called when the user taps the Send button
     public void sendMessage(View view) {
-        Intent intent = new Intent(this, FloorPlans.class);
+        Intent intent = new Intent(this, loggedInNavigation.class);
 //        EditText editText = (EditText) findViewById(R.id.editTextTextPersonName);
 //        String message = editText.getText().toString();
 //        intent.putExtra(EXTRA_MESSAGE, message);

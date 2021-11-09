@@ -13,8 +13,9 @@
         <entry key="app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.2703125" />
         <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.2703125" />
         <entry key="app/src/main/res/layout/activity_display_message.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/activity_floor_plans.xml" value="0.132421875" />
+        <entry key="app/src/main/res/layout/activity_floor_plans.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_home_screen.xml" value="0.258203125" />
+        <entry key="app/src/main/res/layout/activity_logged_in_navigation.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/app_bar_home_screen.xml" value="0.258203125" />
         <entry key="app/src/main/res/layout/content_home_screen.xml" value="0.258203125" />

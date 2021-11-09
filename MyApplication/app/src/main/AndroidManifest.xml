@@ -3,6 +3,8 @@
     package="com.example.myapplication">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
 
     <application
         android:allowBackup="true"
@@ -11,6 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
+        <activity
+            android:name=".loggedInNavigation"
+            android:exported="false" />
         <activity
             android:name=".FloorPlans"
             android:exported="false" />
@@ -21,7 +26,7 @@
             android:theme="@style/Theme.MyApplication.NoActionBar" />
         <activity
             android:name=".DisplayMessageActivity"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".loggedInNavigation">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
