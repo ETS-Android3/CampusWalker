@@ -11,6 +11,9 @@
         <entry key="app/src/main/res/drawable/ic_menu_gallery.xml" value="0.2703125" />
         <entry key="app/src/main/res/drawable/ic_menu_home_foreground.xml" value="0.2703125" />
         <entry key="app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.2703125" />
+        <entry key="app/src/main/res/drawable/ic_menu_user_name_image_foreground.xml" value="0.2703125" />
+        <entry key="app/src/main/res/drawable/ic_user_avatar_background.xml" value="0.2703125" />
+        <entry key="app/src/main/res/drawable/ic_user_avatar_foreground.xml" value="0.2703125" />
         <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.2703125" />
         <entry key="app/src/main/res/layout/activity_display_message.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_floor_plans.xml" value="0.335" />
