@@ -13,12 +13,9 @@ import android.widget.Spinner;
 
 public class FloorPlans extends AppCompatActivity {
 
-    Button next;
-    Button prev;
     ImageView iv;
-    boolean flag;
     int images[] = {R.drawable.oxendine_floor_one, R.drawable.oxendine_floor_two, R.drawable.oxendine_floor_three};
-    int i = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +28,7 @@ public class FloorPlans extends AppCompatActivity {
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
         Spinner spinnerRoomNumber = (Spinner) findViewById(R.id.spinnerRoomNumber);
 
-        // Create an ArrayAdapter using the string array and a default spinner layout
+        // Adapter to obtain oxendine floor numbers
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.oxendine_floors_array, android.R.layout.simple_spinner_item);
         // Specify the layout to use when the list of choices appears
@@ -44,6 +41,7 @@ public class FloorPlans extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Object selection = parent.getItemAtPosition(position);
                 String stringSelection = selection.toString();
+
                 System.out.println(stringSelection);
 
                 // Change to a switch statement when possible
