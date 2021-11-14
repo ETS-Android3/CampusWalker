@@ -22,11 +22,6 @@
             android:parentActivityName=".loggedInNavigation"
         />
         <activity
-            android:name=".HomeScreenActivity"
-            android:exported="false"
-            android:label="@string/title_activity_home_screen"
-            android:theme="@style/Theme.MyApplication.NoActionBar" />
-        <activity
             android:name=".DisplayMessageActivity"
             android:parentActivityName=".loggedInNavigation">
 
