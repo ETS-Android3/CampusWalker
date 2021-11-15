@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
+        <entry key="app/src/main/res/drawable/ic_emergeny_button_foreground.xml" value="0.155078125" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
         <entry key="app/src/main/res/drawable/ic_menu_camera.xml" value="0.2703125" />
         <entry key="app/src/main/res/drawable/ic_menu_classes_foreground.xml" value="0.155078125" />
@@ -19,7 +20,7 @@
         <entry key="app/src/main/res/layout/activity_floor_plans.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_home_screen.xml" value="0.258203125" />
         <entry key="app/src/main/res/layout/activity_logged_in_navigation.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.45" />
         <entry key="app/src/main/res/layout/app_bar_home_screen.xml" value="0.258203125" />
         <entry key="app/src/main/res/layout/content_home_screen.xml" value="0.258203125" />
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.258203125" />
