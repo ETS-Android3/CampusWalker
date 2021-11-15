@@ -4,6 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
+        <entry key="app/src/main/res/drawable/ic_campus security badge_foreground.xml" value="0.152734375" />
+        <entry key="app/src/main/res/drawable/ic_campus security_foreground.xml" value="0.155078125" />
+        <entry key="app/src/main/res/drawable/ic_emergency_contact_foreground.xml" value="0.155078125" />
         <entry key="app/src/main/res/drawable/ic_emergeny_button_foreground.xml" value="0.155078125" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
         <entry key="app/src/main/res/drawable/ic_menu_camera.xml" value="0.2703125" />
@@ -13,6 +16,8 @@
         <entry key="app/src/main/res/drawable/ic_menu_home_foreground.xml" value="0.2703125" />
         <entry key="app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.2703125" />
         <entry key="app/src/main/res/drawable/ic_menu_user_name_image_foreground.xml" value="0.2703125" />
+        <entry key="app/src/main/res/drawable/ic_police_foreground.xml" value="0.155078125" />
+        <entry key="app/src/main/res/drawable/ic_security_badge_foreground.xml" value="0.155078125" />
         <entry key="app/src/main/res/drawable/ic_user_avatar_background.xml" value="0.2703125" />
         <entry key="app/src/main/res/drawable/ic_user_avatar_foreground.xml" value="0.2703125" />
         <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.2703125" />

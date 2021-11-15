@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -78,4 +79,23 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-}
+//    Emergency Call Methods
+    public void call911(View view){
+        Intent callIntent = new Intent(Intent.ACTION_DIAL);
+        callIntent.setData(Uri.parse("tel:911"));
+        startActivity(callIntent);
+    }
+
+        public void callCampusSecurity(View view){
+            Intent callIntent = new Intent(Intent.ACTION_DIAL);
+            callIntent.setData(Uri.parse("tel:9105216235"));
+            startActivity(callIntent);
+        }
+
+    public void callEmergencyContact(View view){
+        Intent callIntent = new Intent(Intent.ACTION_DIAL);
+        callIntent.setData(Uri.parse("tel:9109999999"));
+        startActivity(callIntent);
+        }
+    }
+
