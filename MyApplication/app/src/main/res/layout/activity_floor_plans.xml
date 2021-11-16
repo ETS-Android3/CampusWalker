@@ -6,33 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/floorImage"
-        android:layout_width="413dp"
-        android:layout_height="641dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="92dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/oxendine_floor_one" />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    </LinearLayout>
 
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="167dp"
         android:layout_height="55dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="628dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/floorImage" />
+        tools:layout_editor_absoluteY="643dp" />
 
     <Spinner
         android:id="@+id/spinnerRoomNumber"
         android:layout_width="167dp"
         android:layout_height="55dp"
-        android:layout_marginTop="628dp"
         android:layout_marginEnd="36dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/spinner"
-        app:layout_constraintTop_toTopOf="@+id/floorImage" />
+        tools:layout_editor_absoluteY="643dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
