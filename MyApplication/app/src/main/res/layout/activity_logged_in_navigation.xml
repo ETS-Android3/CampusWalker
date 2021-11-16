@@ -87,12 +87,13 @@
         android:id="@+id/button5"
         android:layout_width="212dp"
         android:layout_height="68dp"
+        android:layout_marginBottom="184dp"
         android:drawableLeft="@drawable/ic_menu_explore_foreground"
         android:onClick="openCampusMap"
         android:text="Explore Campus"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="479dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView2"

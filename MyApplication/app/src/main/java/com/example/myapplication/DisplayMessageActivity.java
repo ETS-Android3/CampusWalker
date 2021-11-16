@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -19,6 +20,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 
 import org.json.JSONArray;
@@ -44,9 +46,9 @@ public class DisplayMessageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_display_message);
 
         // Get the Intent that started this activity and extract the string
-        Intent intent = getIntent();
+//        Intent intent = getIntent();
 //        String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
-        getStudentData();
+//        getStudentData();
 
 
 
@@ -55,87 +57,122 @@ public class DisplayMessageActivity extends AppCompatActivity {
         // Capture the layout's TextView and set the string as its text
 //        TextView textView = findViewById(R.id.textView3);
 //        textView.setText(message);
-    }
 
-    public void getStudentData() {
-        // Instantiate the RequestQueue.
-        TextView textView = (TextView) findViewById(R.id.textView3);
-        RequestQueue queue = Volley.newRequestQueue(DisplayMessageActivity.this);
-        String url = "https://campus-map-web-server.herokuapp.com";
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab9);
+        FloatingActionButton fab1 = (FloatingActionButton) findViewById(R.id.fab10);
+        FloatingActionButton fab2 = (FloatingActionButton) findViewById(R.id.fab11);
+        FloatingActionButton fab3 = (FloatingActionButton) findViewById(R.id.fab12);
+        fab.setOnClickListener(new View.OnClickListener() {
+            boolean isFABOpen = false;
 
-        // Request a string response from the provided URL.
-        JsonObjectRequest jsonRequest = new JsonObjectRequest(Request.Method.GET, url, null,
-                new Response.Listener<JSONObject>() {
-                    @RequiresApi(api = Build.VERSION_CODES.N)
-                    @Override
-                    public void onResponse(JSONObject response) {
-//                        System.out.println("--------------------------------------------1");
-//                        System.out.println();
-//                        System.out.println("--------------------------------------------2");
-//
-//                        JSONArray classes = new JSONArray();
-//                        classes.put(response);
-//                        System.out.println("--------------------------------------------3");
-////                        try {
-////                            for (int i = 0; i < classes.length (); ++i) {
-////                                String keys = classes.getString (i);
-////                                String value = response.getString (keys);
-////                                System.out.println(value);
-////                            }
-////                        } catch (JSONException e) {
-////                            e.printStackTrace();
-////                        }
-////                        for(int i = 0; i < classes.length(); i++){
-////
-////                            System.out.println(classes);
-////                        }
-//
-//                        response.keys().forEachRemaining(key -> {
-//                            try {
-//                                Object value = response.get(key);
-//
-//                                System.out.println(value.toString());
-//                                System.out.println("Key: " + key + " Value" + value);
-//
-//                            } catch (JSONException e) {
-//                                e.printStackTrace();
-//                            }
-//                        });
-
-
-
-                        textView.setText("Response is: " + response);
-                        String stringResponse = response.toString();
-                        storeClassData(stringResponse);
-                        System.out.println("This is being read " + read(DisplayMessageActivity.this, "storage.json"));
-                    }
-                }, new Response.ErrorListener() {
             @Override
-            public void onErrorResponse(VolleyError error) {
-                textView.setText("That didn't work!");
+            public void onClick(View view) {
+                if(!isFABOpen){
+                    showFABMenu();
+                }else{
+                    closeFABMenu();
+                }
             }
+            private void showFABMenu(){
+                isFABOpen=true;
+                fab1.animate().translationY(-getResources().getDimension(R.dimen.standard_55));
+                fab2.animate().translationY(-getResources().getDimension(R.dimen.standard_105));
+                fab3.animate().translationY(-getResources().getDimension(R.dimen.standard_155));
+            }
+
+            private void closeFABMenu(){
+                isFABOpen=false;
+                fab1.animate().translationY(0);
+                fab2.animate().translationY(0);
+                fab3.animate().translationY(0);
+            }
+
         });
 
-        // Add the request to the RequestQueue.
-        queue.add(jsonRequest);
     }
 
-    public void storeClassData(String data){
-        boolean isFilePresent = isFilePresent( DisplayMessageActivity.this,"storage.json");
-        if(isFilePresent) {
-            System.out.println("File is present");
-            String jsonString = read(DisplayMessageActivity.this, "storage.json");
-            //do the json parsing here and do the rest of functionality of app
-        } else {
-            System.out.println("File is not present");
-            boolean isFileCreated = create(DisplayMessageActivity.this, "storage.json", data);
-            if(isFileCreated) {
-                //proceed with storing the first todo or show ui
-            } else {
-                //show error or try again.
-            }
-        }
-    }
+    // Retrieve student data from web server
+//    public void getStudentData() {
+//        // Instantiate the RequestQueue.
+////        TextView textView = (TextView) findViewById(R.id.textView3);
+//        RequestQueue queue = Volley.newRequestQueue(DisplayMessageActivity.this);
+//        String url = "https://campus-map-web-server.herokuapp.com";
+//
+//        // Request a string response from the provided URL.
+//        JsonObjectRequest jsonRequest = new JsonObjectRequest(Request.Method.GET, url, null,
+//                new Response.Listener<JSONObject>() {
+//                    @RequiresApi(api = Build.VERSION_CODES.N)
+//                    @Override
+//                    public void onResponse(JSONObject response) {
+////                        System.out.println("--------------------------------------------1");
+////                        System.out.println();
+////                        System.out.println("--------------------------------------------2");
+////
+////                        JSONArray classes = new JSONArray();
+////                        classes.put(response);
+////                        System.out.println("--------------------------------------------3");
+//////                        try {
+//////                            for (int i = 0; i < classes.length (); ++i) {
+//////                                String keys = classes.getString (i);
+//////                                String value = response.getString (keys);
+//////                                System.out.println(value);
+//////                            }
+//////                        } catch (JSONException e) {
+//////                            e.printStackTrace();
+//////                        }
+//////                        for(int i = 0; i < classes.length(); i++){
+//////
+//////                            System.out.println(classes);
+//////                        }
+////
+////                        response.keys().forEachRemaining(key -> {
+////                            try {
+////                                Object value = response.get(key);
+////
+////                                System.out.println(value.toString());
+////                                System.out.println("Key: " + key + " Value" + value);
+////
+////                            } catch (JSONException e) {
+////                                e.printStackTrace();
+////                            }
+////                        });
+//
+//
+//
+//                        textView.setText("Response is: " + response);
+//                        String stringResponse = response.toString();
+//                        storeClassData(stringResponse);
+//                        System.out.println("This is being read " + read(DisplayMessageActivity.this, "storage.json"));
+//                    }
+//                }, new Response.ErrorListener() {
+//            @Override
+//            public void onErrorResponse(VolleyError error) {
+//                textView.setText("That didn't work!");
+//            }
+//        });
+
+        // Add the request to the RequestQueue.
+//        queue.add(jsonRequest);
+//    }
+
+
+    // Used to store course data on device
+//    public void storeClassData(String data){
+//        boolean isFilePresent = isFilePresent( DisplayMessageActivity.this,"storage.json");
+//        if(isFilePresent) {
+//            System.out.println("File is present");
+//            String jsonString = read(DisplayMessageActivity.this, "storage.json");
+//            //do the json parsing here and do the rest of functionality of app
+//        } else {
+//            System.out.println("File is not present");
+//            boolean isFileCreated = create(DisplayMessageActivity.this, "storage.json", data);
+//            if(isFileCreated) {
+//                //proceed with storing the first todo or show ui
+//            } else {
+//                //show error or try again.
+//            }
+//        }
+//    }
 
     // Read the user class data is already stored on device
     private String read(Context context, String fileName) {
@@ -157,34 +194,52 @@ public class DisplayMessageActivity extends AppCompatActivity {
     }
 
     // Create the user class data
-    private boolean create(Context context, String fileName, String jsonString){
-        String FILENAME = "storage.json";
-        try {
-            System.out.println("Attempting to write file");
-            FileOutputStream fos = context.openFileOutput(fileName,Context.MODE_PRIVATE);
-            if (jsonString != null) {
-                System.out.println("The response is NOT null");
-                fos.write(jsonString.getBytes());
-                System.out.println("String was successfully written");
-            }
-            System.out.println("Attempting to close");
-            fos.close();
-            System.out.println("fos is closed");
-            return true;
-        } catch (FileNotFoundException fileNotFound) {
-            return false;
-        } catch (IOException ioException) {
-            return false;
-        }
+//    private boolean create(Context context, String fileName, String jsonString){
+//        String FILENAME = "storage.json";
+//        try {
+//            System.out.println("Attempting to write file");
+//            FileOutputStream fos = context.openFileOutput(fileName,Context.MODE_PRIVATE);
+//            if (jsonString != null) {
+//                System.out.println("The response is NOT null");
+//                fos.write(jsonString.getBytes());
+//                System.out.println("String was successfully written");
+//            }
+//            System.out.println("Attempting to close");
+//            fos.close();
+//            System.out.println("fos is closed");
+//            return true;
+//        } catch (FileNotFoundException fileNotFound) {
+//            return false;
+//        } catch (IOException ioException) {
+//            return false;
+//        }
+//    }
+//
+//    // See if class data is already present on the device
+//    public boolean isFilePresent(Context context, String fileName) {
+//        String path = context.getFilesDir().getAbsolutePath() + "/" + fileName;
+//        File file = new File(path);
+//        return file.exists();
+//    }
+
+    //    Emergency Call Methods
+    public void call911(View view){
+        Intent callIntent = new Intent(Intent.ACTION_DIAL);
+        callIntent.setData(Uri.parse("tel:911"));
+        startActivity(callIntent);
     }
 
-    // See if class data is already present on the device
-    public boolean isFilePresent(Context context, String fileName) {
-        String path = context.getFilesDir().getAbsolutePath() + "/" + fileName;
-        File file = new File(path);
-        return file.exists();
+    public void callCampusSecurity(View view){
+        Intent callIntent = new Intent(Intent.ACTION_DIAL);
+        callIntent.setData(Uri.parse("tel:9105216235"));
+        startActivity(callIntent);
     }
 
+    public void callEmergencyContact(View view){
+        Intent callIntent = new Intent(Intent.ACTION_DIAL);
+        callIntent.setData(Uri.parse("tel:9109999999"));
+        startActivity(callIntent);
+    }
 
 
 }
