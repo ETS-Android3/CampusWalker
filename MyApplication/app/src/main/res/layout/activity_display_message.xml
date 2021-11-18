@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="160dp"
         android:layout_marginEnd="144dp"
-        android:text="Fall 2020 Classes"
+        android:text="Fall 2021 Classes"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
