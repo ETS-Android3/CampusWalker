@@ -5,7 +5,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,13 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".CampusView"
+            android:exported="false" />
+        <activity
             android:name=".loggedInNavigation"
             android:exported="false" />
         <activity
             android:name=".FloorPlans"
             android:exported="false"
-            android:parentActivityName=".loggedInNavigation"
-        />
+            android:parentActivityName=".loggedInNavigation" />
         <activity
             android:name=".DisplayMessageActivity"
             android:parentActivityName=".loggedInNavigation">

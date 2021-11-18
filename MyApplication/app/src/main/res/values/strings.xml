@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Campus Assistant</string>
+    <string name="app_name">Campus Walker</string>
     <string name="username_message">BraveWeb Email</string>
     <string name="password_message">BraveWeb Password</string>
     <string name="button_send">Login</string>

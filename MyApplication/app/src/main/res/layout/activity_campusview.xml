@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
@@ -16,25 +16,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-
-
-
     </LinearLayout>
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="167dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="36dp"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="643dp" />
-
-    <Spinner
-        android:id="@+id/spinnerRoomNumber"
-        android:layout_width="167dp"
-        android:layout_height="55dp"
-        android:layout_marginEnd="36dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/spinner"
-        tools:layout_editor_absoluteY="643dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

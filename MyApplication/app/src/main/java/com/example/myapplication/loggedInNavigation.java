@@ -58,7 +58,7 @@ public class loggedInNavigation extends AppCompatActivity {
     }
 
     public void openCampusMap(View view){
-        Intent intent  = new Intent(this, FloorPlans.class);
+        Intent intent  = new Intent(this, CampusView.class);
         startActivity(intent);
     }
 

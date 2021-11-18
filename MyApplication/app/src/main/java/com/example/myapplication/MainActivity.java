@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void guestLogin(View view) {
-        Intent intent = new Intent(this, FloorPlans.class);
+        Intent intent = new Intent(this, CampusView.class);
 //        EditText editText = (EditText) findViewById(R.id.editTextTextPersonName);
 //        String message = editText.getText().toString();
 //        intent.putExtra(EXTRA_MESSAGE, message);
