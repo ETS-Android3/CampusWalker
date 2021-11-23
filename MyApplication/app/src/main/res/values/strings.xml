@@ -24,6 +24,7 @@
     </string-array>
 
     <string-array name="oxendine_rooms_array_floorOne">
+        <item>Class #</item>
         <item>1201</item>
         <item>1202</item>
         <item>1203</item>
@@ -33,6 +34,19 @@
         <item>1209</item>
         <item>1210</item>
         <item>1211</item>
+    </string-array>
+
+    <string-array name="floorTwo">
+        <item>Class #</item>
+        <item>2201</item>
+        <item>2202</item>
+        <item>2203</item>
+        <item>2204</item>
+        <item>2207</item>
+        <item>2208</item>
+        <item>2209</item>
+        <item>2210</item>
+        <item>2211</item>
     </string-array>
 
 </resources>

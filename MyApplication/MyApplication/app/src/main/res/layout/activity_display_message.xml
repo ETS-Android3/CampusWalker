@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DisplayMessageActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="144dp"
+        android:text="Fall 2021 Classes"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    Temporary Hard Coded Table      -->
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="320dp"
+        android:layout_marginEnd="24dp"
+        android:stretchColumns="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:background="#f0f0f0">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="Name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="Building"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="Room #"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="Advanced Software Project"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+            <TextView
+                android:background="@color/purple_200"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="Oxendine" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:padding="3dip"
+                android:text="1202"
+                android:gravity="center"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="American Civ to 1877" />
+
+            <TextView
+                android:background="#fcba03"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="Online" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:padding="3dip"
+                android:text="N/A"
+                android:gravity="center"/>
+        </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="Prob and Stat I" />
+
+            <TextView
+                android:background="@color/purple_200"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="Oxendine" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="2246" />
+        </TableRow>
+
+
+        <TableRow>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="Theory of Computation" />
+
+            <TextView
+                android:background="@color/purple_200"
+
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="Oxendine" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:padding="3dip"
+                android:text="1258"
+                android:gravity="center"/>
+        </TableRow>
+
+        <TableRow>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="College Phys I" />
+
+            <TextView
+                android:background="@color/purple_200"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="Online" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:padding="3dip"
+                android:text="3246"
+                android:gravity="center"/>
+        </TableRow>
+
+    </TableLayout>
+
+
+    <!--    Emergency Floating Action Buttons   -->
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="call911"
+        app:backgroundTint="#CD1212"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_police_foreground"
+        app:tint="@android:color/white" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="callCampusSecurity"
+        app:backgroundTint="#F89924"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_security_badge_foreground"
+        app:tint="@android:color/white" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="callEmergencyContact"
+        app:backgroundTint="#49CB3B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_emergency_contact_foreground"
+        app:tint="@android:color/white" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="emergency button"
+
+
+        android:src="@drawable/ic_emergeny_button_foreground"
+        app:backgroundTint="#CD1212"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@android:color/white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

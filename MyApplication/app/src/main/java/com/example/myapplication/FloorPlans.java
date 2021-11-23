@@ -29,12 +29,11 @@ public class FloorPlans extends AppCompatActivity {
         setContentView(R.layout.activity_floor_plans);
 //        iv = (ImageView) findViewById(R.id.floorImage);
 
-        SubsamplingScaleImageView imageView = findViewById(R.id.imageViewCampusMap);
+        PinView imageView = findViewById(R.id.imageViewCampusMap);
         imageView.setImage(ImageSource.resource(R.drawable.oxendine_floor_one));
         imageView.setMinimumDpi(160);
         imageView.setDoubleTapZoomDpi(160);
         imageView.setMinimumTileDpi(160);
-
 
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
         Spinner spinnerRoomNumber = (Spinner) findViewById(R.id.spinnerRoomNumber);
@@ -77,6 +76,10 @@ public class FloorPlans extends AppCompatActivity {
             }
         });
 
+
+
+
+
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> roomNumAdapter = ArrayAdapter.createFromResource(this,
                 R.array.oxendine_rooms_array_floorOne, android.R.layout.simple_spinner_item);
@@ -90,20 +93,33 @@ public class FloorPlans extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Object selection = parent.getItemAtPosition(position);
                 String stringSelection = selection.toString();
-                System.out.println(stringSelection);
+
+                System.out.println("The String selection" + stringSelection);
 
                 // Change to a switch statement when possible
-                if (stringSelection.equals("First Floor")) {
-                    iv.setImageResource(images[0]);
-                    System.out.println("Floor 1");
-                } else if (stringSelection.equals("Second Floor")) {
-                    iv.setImageResource(images[1]);
-                    System.out.println("Floor 2");
-                } else if (stringSelection.equals("Third Floor")) {
-                    iv.setImageResource(images[2]);
-                    System.out.println("Floor 3");
+                if (stringSelection.equals("1201")) {
+
+                    PointF class1201 = new PointF(650f, 1900f);
+                    imageView.setPin(class1201);
+                    System.out.println("Adapter =  Room 1201");
+
+                } else if (stringSelection.equals("1202")) {
+
+                    PointF class1202 = new PointF(1480f, 1000);
+                    imageView.setPin(class1202);
+                    System.out.println("Adapter =  Room 1202");
+
+                } else if (stringSelection.equals("1203")) {
+
+                    PointF class1203 = new PointF(1540f, 1700f);
+                    imageView.setPin(class1203);
+                    System.out.println("Adapter = Room 1203");
+
                 } else {
-                    System.out.println("Selection did not match");
+                    PointF class1202 = new PointF(-1400f, -1400f);
+                    imageView.setPin(class1202);
+                    System.out.println("Adapter = Room 1203");
+
                 }
             }
 
@@ -115,63 +131,9 @@ public class FloorPlans extends AppCompatActivity {
         });
 
 
+
     }
 
 }
 
-
- class PinView extends SubsamplingScaleImageView {
-
-    private final Paint paint = new Paint();
-    private final PointF vPin = new PointF();
-    private PointF sPin;
-    private Bitmap pin;
-    Context context;
-
-    public PinView(Context context) {
-        this(context, null);
-        this.context = context;
-    }
-
-    public PinView(Context context, AttributeSet attr) {
-        super(context, attr);
-        this.context = context;
-        initialise();
-    }
-
-    public void setPin(PointF sPin) {
-        this.sPin = sPin;
-        initialise();
-        invalidate();
-    }
-
-    private void initialise() {
-        float density = getResources().getDisplayMetrics().densityDpi;
-        pin = BitmapFactory.decodeResource(this.getResources(), R.drawable.ic_marker_foreground);
-        float w = (density / 420f) * pin.getWidth();
-        float h = (density / 420f) * pin.getHeight();
-        pin = Bitmap.createScaledBitmap(pin, (int) w, (int) h, true);
-    }
-
-    @Override
-    protected void onDraw(android.graphics.Canvas canvas) {
-        super.onDraw(canvas);
-
-        // Don't draw pin before image is ready so it doesn't move around during setup.
-        if (!isReady()) {
-            return;
-        }
-
-        paint.setAntiAlias(true);
-
-        if (sPin != null && pin != null) {
-            sourceToViewCoord(sPin, vPin);
-            float vX = vPin.x - (pin.getWidth() / 2);
-            float vY = vPin.y - pin.getHeight();
-            ((android.graphics.Canvas) canvas).drawBitmap(pin, vX, vY, paint);
-            Toast.makeText(context, "works ? ", Toast.LENGTH_SHORT).show();
-        }
-
-    }
-}
 
